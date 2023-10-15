@@ -1,10 +1,11 @@
+/* eslint-disable consistent-return */
 /* eslint-disable import/extensions */
 /* eslint-disable no-else-return */
 import readlineSync from 'readline-sync';
 
 // eslint-disable-next-line import/extensions
 import userName from '../src/cli.js';
-import getRandomNumber from '../src/randomNumber.js';
+import { getRandomNumber } from '../src/randomNumber.js';
 /* eslint-disable no-unused-expressions */
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-console */
@@ -30,7 +31,7 @@ const brainEven = () => {
   console.log(result);
   if (result !== 'Correct!') {
     console.log(`Let's try again, ${userName}`);
-    return;
+    return 'exit';
   }
   console.log(`Congratulations, ${userName}!`);
 };

@@ -21,7 +21,10 @@ const startGame = () => {
   console.log(`Hello, ${userName}!`);
   const game = readlineSync.prompt();
   for (let i = 1; i < 4; i += 1) {
-    switchGame(game);
+    const output = switchGame(game);
+    if (output === 'exit') {
+      break;
+    }
   }
 };
 
