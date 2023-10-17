@@ -6,6 +6,7 @@ import readlineSync from 'readline-sync';
 import runBrainEven from './brain-even.js';
 import runBrainCalc from './brain-calc.js';
 import userName from '../src/cli.js';
+import runBrainGcd from './brain-gcd.js';
 
 // eslint-disable-next-line consistent-return
 const switchGame = (game) => {
@@ -13,6 +14,8 @@ const switchGame = (game) => {
     return runBrainEven();
   } if (game === 'brain-calc') {
     return runBrainCalc();
+  } if (game === 'brain-gcd') {
+    return runBrainGcd();
   }
 };
 

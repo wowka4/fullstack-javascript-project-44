@@ -4,13 +4,12 @@
 /* eslint-disable no-console */
 import readlineSync from 'readline-sync';
 import userName from '../src/cli.js';
-import { getRandomNumber, getOperand } from '../src/randomNumber.js';
+import { getRandomNumber, getOperator } from '../src/randomNumber.js';
 
-// const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min;
-const resultOfCalc = (num1, num2, operand) => {
-  if (operand === '+') {
+const resultOfCalc = (num1, num2, operator) => {
+  if (operator === '+') {
     return num1 + num2;
-  } else if (operand === '-') {
+  } else if (operator === '-') {
     return num1 - num2;
   } else {
     return num1 * num2;
@@ -21,7 +20,7 @@ const calc = () => {
   console.log('What is the result of the expression?');
   const firstNum = getRandomNumber(1, 10);
   const secondNum = getRandomNumber(1, 10);
-  const operand = getOperand();
+  const operand = getOperator();
   console.log(`Question: ${firstNum} ${operand} ${secondNum}`);
   const answer = readlineSync.question('Your answer: ');
   if (Number(answer) !== resultOfCalc(firstNum, secondNum, operand)) {

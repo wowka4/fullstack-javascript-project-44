@@ -1,10 +1,10 @@
 const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
-const operands = ['+', '-', '*'];
+const operators = ['+', '-', '*'];
 
-const getOperand = () => {
+const getOperator = () => {
   const number = getRandomNumber(1, 3);
-  return operands[number];
+  return operators[number];
 };
 
-export { getRandomNumber, getOperand };
+export { getRandomNumber, getOperator };
