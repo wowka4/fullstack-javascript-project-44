@@ -33,7 +33,6 @@ const brainEven = () => {
     console.log(`Let's try again, ${userName}`);
     return 'exit';
   }
-  console.log(`Congratulations, ${userName}!`);
 };
 
 export default brainEven;

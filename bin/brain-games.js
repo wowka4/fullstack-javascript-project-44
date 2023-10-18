@@ -9,6 +9,7 @@ import runBrainCalc from './brain-calc.js';
 import userName from '../src/cli.js';
 import runBrainGcd from './brain-gcd.js';
 import runBrainProgression from './brain-progression.js';
+import runBrainPrime from './brain-prime.js';
 
 // eslint-disable-next-line consistent-return
 const switchGame = (game) => {
@@ -20,6 +21,8 @@ const switchGame = (game) => {
     return runBrainGcd();
   } if (game === 'brain-progression') {
     return runBrainProgression();
+  } if (game === 'brain-prime') {
+    return runBrainPrime();
   }
 };
 

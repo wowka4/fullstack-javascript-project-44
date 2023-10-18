@@ -30,7 +30,6 @@ const calc = () => {
   } else {
     console.log('Correct!');
   }
-  console.log(`Congratulations, ${userName}!`);
 };
 
 export default calc;

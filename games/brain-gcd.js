@@ -47,7 +47,6 @@ const compareResult = () => {
   } else {
     console.log('Correct');
   }
-  console.log(`Congratulations, ${userName}!`);
 };
 
 export default compareResult;
