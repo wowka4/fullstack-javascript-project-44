@@ -29,7 +29,7 @@ const brainEven = () => {
   // eslint-disable-next-line no-unused-expressions
   console.log(result);
   if (result !== 'Correct!') {
-    console.log(`Let's try again, ${userName}`);
+    console.log(`Let's try again, ${userName}!`);
     return 'exit';
   }
 };
