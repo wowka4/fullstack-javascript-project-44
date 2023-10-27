@@ -4,6 +4,7 @@
 // eslint-disable-next-line import/extensions
 import readlineSync from 'readline-sync';
 import { getRandomNumber } from '../src/randomNumber.js';
+import userName from '../src/userName.js';
 
 const findMinOperator = (num1, num2) => {
   if (num1 < num2) {
@@ -32,7 +33,7 @@ const rightAnswer = (num1, num2) => {
 };
 
 // eslint-disable-next-line consistent-return
-const brainGcd = (userName) => {
+const brainGcd = () => {
   console.log('Find the greatest common divisor of given numbers.');
   const firstNumber = getRandomNumber(1, 100);
   const secondNumber = getRandomNumber(1, 100);

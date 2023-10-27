@@ -2,9 +2,9 @@
 /* eslint-disable import/extensions */
 /* eslint-disable no-else-return */
 import readlineSync from 'readline-sync';
-
 // eslint-disable-next-line import/extensions
 import { getRandomNumber } from '../src/randomNumber.js';
+import userName from '../src/userName.js';
 /* eslint-disable no-unused-expressions */
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-console */
@@ -18,7 +18,7 @@ const isNumberEven = (num, name, answer) => {
   }
 };
 
-const brainEven = (userName) => {
+const brainEven = () => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   const randomNumber = getRandomNumber(1, 1000);
   // eslint-disable-next-line no-console

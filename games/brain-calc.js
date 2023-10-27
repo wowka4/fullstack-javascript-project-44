@@ -4,6 +4,7 @@
 /* eslint-disable no-console */
 import readlineSync from 'readline-sync';
 import { getRandomNumber, getOperator } from '../src/randomNumber.js';
+import userName from '../src/userName.js';
 
 const resultOfCalc = (num1, num2, operator) => {
   if (operator === '+') {
@@ -15,7 +16,7 @@ const resultOfCalc = (num1, num2, operator) => {
   }
 };
 
-const calc = (userName) => {
+const calc = () => {
   console.log('What is the result of the expression?');
   const firstNum = getRandomNumber(1, 10);
   const secondNum = getRandomNumber(1, 10);

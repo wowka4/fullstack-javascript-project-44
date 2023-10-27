@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-expressions */
 /* eslint-disable no-console */
 /* eslint-disable import/extensions */
-import userName from './cli.js';
+import userName from './userName.js';
 
 const startGame = (game) => {
   userName;

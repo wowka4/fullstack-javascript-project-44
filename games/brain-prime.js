@@ -5,6 +5,7 @@
 /* eslint-disable indent */
 import readlineSync from 'readline-sync';
 import { getRandomNumber } from '../src/randomNumber.js';
+import userName from '../src/userName.js';
 
 const isNaturalNumber = (num) => {
   let count = 1;
@@ -16,7 +17,7 @@ const isNaturalNumber = (num) => {
     return count < 3;
   };
 
-  const brainPrime = (userName) => {
+  const brainPrime = () => {
     console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
     const number = getRandomNumber(1, 1000);
     console.log(`Question: ${number} `);
