@@ -4,7 +4,6 @@
 import readlineSync from 'readline-sync';
 
 // eslint-disable-next-line import/extensions
-import userName from '../src/cli.js';
 import { getRandomNumber } from '../src/randomNumber.js';
 /* eslint-disable no-unused-expressions */
 /* eslint-disable no-param-reassign */
@@ -19,7 +18,7 @@ const isNumberEven = (num, name, answer) => {
   }
 };
 
-const brainEven = () => {
+const brainEven = (userName) => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   const randomNumber = getRandomNumber(1, 1000);
   // eslint-disable-next-line no-console

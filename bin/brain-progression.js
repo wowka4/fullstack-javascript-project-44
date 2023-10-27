@@ -1,7 +1,5 @@
 /* eslint-disable import/extensions */
-/* eslint-disable import/no-unresolved */
+import startGame from '../src/index.js';
 import brainProgression from '../games/brain-progression.js';
 
-const runBrainProgression = () => brainProgression();
-
-export default runBrainProgression;
+startGame(brainProgression);

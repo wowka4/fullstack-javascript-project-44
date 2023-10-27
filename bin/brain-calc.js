@@ -1,6 +1,5 @@
 /* eslint-disable import/extensions */
 import calc from '../games/brain-calc.js';
+import startGame from '../src/index.js';
 
-const runBrainCalc = () => calc();
-
-export default runBrainCalc;
+startGame(calc);

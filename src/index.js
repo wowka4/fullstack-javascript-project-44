@@ -1,5 +1,18 @@
+/* eslint-disable no-else-return */
+/* eslint-disable no-unused-expressions */
+/* eslint-disable no-console */
 /* eslint-disable import/extensions */
-/* eslint-disable import/no-cycle */
-import startGame from '../bin/brain-games.js';
+import userName from './cli.js';
 
-startGame();
+const startGame = (game) => {
+  userName;
+  for (let i = 0; i < 3; i += 1) {
+    const result = game();
+    if (result === 'exit') {
+      return;
+    }
+  }
+  console.log(`Congratulations, ${userName}!`);
+};
+
+export default startGame;

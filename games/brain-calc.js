@@ -3,7 +3,6 @@
 /* eslint-disable import/extensions */
 /* eslint-disable no-console */
 import readlineSync from 'readline-sync';
-import userName from '../src/cli.js';
 import { getRandomNumber, getOperator } from '../src/randomNumber.js';
 
 const resultOfCalc = (num1, num2, operator) => {
@@ -16,20 +15,20 @@ const resultOfCalc = (num1, num2, operator) => {
   }
 };
 
-const calc = () => {
+const calc = (userName) => {
   console.log('What is the result of the expression?');
   const firstNum = getRandomNumber(1, 10);
   const secondNum = getRandomNumber(1, 10);
-  const operand = getOperator();
-  console.log(`Question: ${firstNum} ${operand} ${secondNum}`);
+  const operator = getOperator();
+  console.log(`Question: ${firstNum} ${operator} ${secondNum}`);
   const answer = readlineSync.question('Your answer: ');
-  if (Number(answer) !== resultOfCalc(firstNum, secondNum, operand)) {
-    console.log(`${answer} is wrong answer ;(. Correct answer was ${firstNum * secondNum}.`);
+  const rightAnswer = resultOfCalc(firstNum, secondNum, operator);
+  if (Number(answer) !== rightAnswer) {
+    console.log(`${answer} is wrong answer ;(. Correct answer was ${rightAnswer}.`);
     console.log(`Let's try again, ${userName}!`);
     return 'exit';
-  } else {
-    console.log('Correct!');
   }
+  console.log('Correct!');
 };
 
 export default calc;

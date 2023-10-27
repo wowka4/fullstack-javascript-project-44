@@ -5,11 +5,10 @@
 /* eslint-disable indent */
 import readlineSync from 'readline-sync';
 import { getRandomNumber } from '../src/randomNumber.js';
-import userName from '../src/cli.js';
 
 const isNaturalNumber = (num) => {
   let count = 1;
-    for (let i = 1; i <= num / 2; i += 1) {
+    for (let i = 2; i <= num / 2; i += 1) {
       if (num % i === 0) {
         count += 1;
       }
@@ -17,7 +16,7 @@ const isNaturalNumber = (num) => {
     return count < 3;
   };
 
-  const brainPrime = () => {
+  const brainPrime = (userName) => {
     console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
     const number = getRandomNumber(1, 1000);
     console.log(`Question: ${number} `);

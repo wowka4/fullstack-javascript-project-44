@@ -4,9 +4,8 @@
 // eslint-disable-next-line import/extensions
 import readlineSync from 'readline-sync';
 import { getRandomNumber } from '../src/randomNumber.js';
-import userName from '../src/cli.js';
 
-const findMinOperands = (num1, num2) => {
+const findMinOperator = (num1, num2) => {
   if (num1 < num2) {
     return num1;
   }
@@ -21,9 +20,9 @@ const findMax = (arr) => {
   }
   return max;
 };
-const brainGcd = (num1, num2) => {
+const rightAnswer = (num1, num2) => {
   const arr = [];
-  for (let i = 1; i <= findMinOperands(num1, num2); i += 1) {
+  for (let i = 1; i <= findMinOperator(num1, num2); i += 1) {
     if (num1 % i === 0 && num2 % i === 0) {
       arr.push(i);
     }
@@ -33,13 +32,13 @@ const brainGcd = (num1, num2) => {
 };
 
 // eslint-disable-next-line consistent-return
-const compareResult = () => {
+const brainGcd = (userName) => {
   console.log('Find the greatest common divisor of given numbers.');
   const firstNumber = getRandomNumber(1, 100);
   const secondNumber = getRandomNumber(1, 100);
   console.log(`Question: ${firstNumber} ${secondNumber}`);
   const answer = readlineSync.question('Your answer: ');
-  const correctAnswer = brainGcd(firstNumber, secondNumber);
+  const correctAnswer = rightAnswer(firstNumber, secondNumber);
   if (correctAnswer !== Number(answer)) {
     console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.`);
     console.log(`Let's try again, ${userName}!`);
@@ -49,4 +48,4 @@ const compareResult = () => {
   }
 };
 
-export default compareResult;
+export default brainGcd;

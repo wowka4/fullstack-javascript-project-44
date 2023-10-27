@@ -1,6 +1,6 @@
+/* eslint-disable import/extensions */
 // eslint-disable-next-line import/extensions
-import compareResult from '../games/brain-gcd.js';
+import startGame from '../src/index.js';
+import brainGcd from '../games/brain-gcd.js';
 
-const runBrainGcd = () => compareResult();
-
-export default runBrainGcd;
+startGame(brainGcd);

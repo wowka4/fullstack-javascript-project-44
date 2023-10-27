@@ -1,6 +1,7 @@
 /* eslint-disable import/extensions */
+import startGame from '../src/index.js';
 import brainEven from '../games/brain-even.js';
 
-const runBrainEven = () => brainEven();
-
-export default runBrainEven;
+startGame(brainEven);
+// в бин я кладу вызов уникальной логики игр, в геймс я реализую эту уникальную логику,
+// а общие детали, приветствие и окончание игры я кладу в индекс
