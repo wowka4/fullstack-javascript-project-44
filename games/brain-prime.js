@@ -14,7 +14,7 @@ const isNaturalNumber = (num) => {
         count += 1;
       }
     }
-    return count < 3;
+    return count < 2;
   };
 
   const brainPrime = () => {
