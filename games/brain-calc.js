@@ -25,7 +25,7 @@ const calc = () => {
     console.log(`Let's try again, ${userName}!`);
     return 'exit';
   }
-  console.log('Correct!');  
+  console.log('Correct!');
 };
 
 export default calc;

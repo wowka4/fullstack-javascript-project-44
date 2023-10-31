@@ -1,7 +1,7 @@
-
 import readlineSync from 'readline-sync';
 import { getRandomNumber } from '../src/randomNumber.js';
 import userName from '../src/userName.js';
+
 const isNumberEven = (num, name, answer) => {
   if (num % 2 === 0 && answer !== 'yes') {
     return `${answer} is wrong answer ;(. Correct answer was yes.`;
