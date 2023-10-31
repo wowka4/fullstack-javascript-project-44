@@ -1,6 +1,3 @@
-/* eslint-disable no-else-return */
-/* eslint-disable no-console */
-/* eslint-disable import/extensions */
 import readlineSync from 'readline-sync';
 import { getRandomNumber } from '../src/randomNumber.js';
 import userName from '../src/userName.js';
@@ -17,7 +14,6 @@ const getProgression = () => {
   return arrOfNums;
 };
 
-// eslint-disable-next-line consistent-return
 const brainProgression = () => {
   const progression = getProgression();
   const lastIndex = progression.length - 1;

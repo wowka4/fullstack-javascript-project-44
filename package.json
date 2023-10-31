@@ -1,7 +1,7 @@
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
-  "description": "My first project",
+  "description": "My first project where i use JS. There are five console-games to train your brain. I wrote a logic of games and create a right architecture of project. I hope you'll happy!",
   "bin": {
     "brain-games": "bin/brain-games.js",
     "brain-even": "bin/brain-even.js",

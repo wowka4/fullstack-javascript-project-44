@@ -1,8 +1,3 @@
-/* eslint-disable consistent-return */
-/* eslint-disable import/extensions */
-/* eslint-disable no-console */
-/* eslint-disable no-else-return */
-/* eslint-disable indent */
 import readlineSync from 'readline-sync';
 import { getRandomNumber } from '../src/randomNumber.js';
 import userName from '../src/userName.js';

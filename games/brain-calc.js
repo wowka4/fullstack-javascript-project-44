@@ -1,7 +1,3 @@
-/* eslint-disable consistent-return */
-/* eslint-disable no-else-return */
-/* eslint-disable import/extensions */
-/* eslint-disable no-console */
 import readlineSync from 'readline-sync';
 import { getRandomNumber, getOperator } from '../src/randomNumber.js';
 import userName from '../src/userName.js';
@@ -29,7 +25,7 @@ const calc = () => {
     console.log(`Let's try again, ${userName}!`);
     return 'exit';
   }
-  console.log('Correct!');
+  console.log('Correct!');  
 };
 
 export default calc;
