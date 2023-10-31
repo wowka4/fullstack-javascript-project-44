@@ -10,11 +10,11 @@ const getOperator = () => {
 const resultOfCalc = (num1, num2, operator) => {
   if (operator === '+') {
     return num1 + num2;
-  } else if (operator === '-') {
-    return num1 - num2;
-  } else {
-    return num1 * num2;
   }
+  if (operator === '-') {
+    return num1 - num2;
+  }
+  return num1 * num2;
 };
 
 const calc = () => {

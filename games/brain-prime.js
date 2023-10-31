@@ -10,9 +10,8 @@ const isNaturalNumber = (num) => {
   }
   if (count === 0) {
     return 'yes';
-  } else {
-    return 'no';
   }
+  return 'no';
 };
 
 const brainPrime = () => {

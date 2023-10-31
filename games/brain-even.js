@@ -4,9 +4,8 @@ import getRandomNumber from '../src/randomNumber.js';
 const isNumberEven = (num) => {
   if (num % 2 === 0) {
     return 'yes';
-  } else {
-    return 'no';
   }
+  return 'no';
 };
 
 const brainEven = () => {
