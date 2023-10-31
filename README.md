@@ -8,4 +8,4 @@
 ```bash
  brain-games
 ```
-<script async id="asciicast-fBul2pj6akpw8Or8TqzxOrxmr" src="https://asciinema.org/a/fBul2pj6akpw8Or8TqzxOrxmr.js"></script>
+<a href="https://asciinema.org/a/fBul2pj6akpw8Or8TqzxOrxmr" target="_blank"><img src="https://asciinema.org/a/fBul2pj6akpw8Or8TqzxOrxmr.svg" /></a>
