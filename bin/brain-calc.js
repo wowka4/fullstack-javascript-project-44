@@ -2,4 +2,6 @@
 import calc from '../games/brain-calc.js';
 import startGame from '../src/index.js';
 
-startGame(calc);
+const rules = 'What is the result of the expression?';
+
+startGame(rules, calc);

@@ -1,6 +1,5 @@
 import readlineSync from 'readline-sync';
-import { getRandomNumber } from '../src/randomNumber.js';
-import userName from '../src/userName.js';
+import getRandomNumber from '../src/randomNumber.js';
 
 const getProgression = () => {
   const lengthOfProgression = getRandomNumber(5, 15);
@@ -20,15 +19,8 @@ const brainProgression = () => {
   const missNum = getRandomNumber(0, lastIndex);
   const rightAnswer = progression[missNum];
   progression[missNum] = '..';
-  console.log('What number is missing in the progression?');
   const userAnswer = readlineSync.question(`Question: ${progression.join(' ')} `);
-  if (Number(userAnswer) !== rightAnswer) {
-    console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${rightAnswer}.`);
-    console.log(`Let's try again, ${userName}!`);
-    return 'exit';
-  } else {
-    console.log('Correct!');
-  }
+  return [rightAnswer, Number(userAnswer)];
 };
 
 export default brainProgression;

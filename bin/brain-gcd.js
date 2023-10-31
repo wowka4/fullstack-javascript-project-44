@@ -2,4 +2,5 @@
 import startGame from '../src/index.js';
 import brainGcd from '../games/brain-gcd.js';
 
-startGame(brainGcd);
+const rules = 'Find the greatest common divisor of given numbers.';
+startGame(rules, brainGcd);

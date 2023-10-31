@@ -1,6 +1,5 @@
 import readlineSync from 'readline-sync';
-import { getRandomNumber } from '../src/randomNumber.js';
-import userName from '../src/userName.js';
+import getRandomNumber from '../src/randomNumber.js';
 
 const findMinOperator = (num1, num2) => {
   if (num1 < num2) {
@@ -29,19 +28,12 @@ const rightAnswer = (num1, num2) => {
 };
 
 const brainGcd = () => {
-  console.log('Find the greatest common divisor of given numbers.');
   const firstNumber = getRandomNumber(1, 100);
   const secondNumber = getRandomNumber(1, 100);
   console.log(`Question: ${firstNumber} ${secondNumber}`);
   const answer = readlineSync.question('Your answer: ');
   const correctAnswer = rightAnswer(firstNumber, secondNumber);
-  if (correctAnswer !== Number(answer)) {
-    console.log(`${answer} is wrong answer ;(. Correct answer was ${correctAnswer}.`);
-    console.log(`Let's try again, ${userName}!`);
-    return 'exit';
-  } else {
-    console.log('Correct');
-  }
+  return [correctAnswer, Number(answer)];
 };
 
 export default brainGcd;

@@ -1,6 +1,11 @@
 import readlineSync from 'readline-sync';
-import { getRandomNumber, getOperator } from '../src/randomNumber.js';
-import userName from '../src/userName.js';
+import getRandomNumber from '../src/randomNumber.js';
+
+const getOperator = () => {
+  const operators = ['+', '-', '*'];
+  const number = getRandomNumber(0, 2);
+  return operators[number];
+};
 
 const resultOfCalc = (num1, num2, operator) => {
   if (operator === '+') {
@@ -13,19 +18,13 @@ const resultOfCalc = (num1, num2, operator) => {
 };
 
 const calc = () => {
-  console.log('What is the result of the expression?');
   const firstNum = getRandomNumber(1, 10);
   const secondNum = getRandomNumber(1, 10);
   const operator = getOperator();
   console.log(`Question: ${firstNum} ${operator} ${secondNum}`);
   const answer = readlineSync.question('Your answer: ');
   const rightAnswer = resultOfCalc(firstNum, secondNum, operator);
-  if (Number(answer) !== rightAnswer) {
-    console.log(`${answer} is wrong answer ;(. Correct answer was ${rightAnswer}.`);
-    console.log(`Let's try again, ${userName}!`);
-    return 'exit';
-  }
-  console.log('Correct!');
+  return [rightAnswer, Number(answer)];
 };
 
 export default calc;

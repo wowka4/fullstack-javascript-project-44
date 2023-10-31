@@ -1,6 +1,5 @@
 import readlineSync from 'readline-sync';
-import { getRandomNumber } from '../src/randomNumber.js';
-import userName from '../src/userName.js';
+import getRandomNumber from '../src/randomNumber.js';
 
 const isNaturalNumber = (num) => {
   let count = 0;
@@ -9,25 +8,19 @@ const isNaturalNumber = (num) => {
       count += 1;
     }
   }
-  return count === 0;
+  if (count === 0) {
+    return 'yes';
+  } else {
+    return 'no';
+  }
 };
 
 const brainPrime = () => {
-  console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
-  const number = getRandomNumber(1, 1000);
+  const number = getRandomNumber(1, 10);
   console.log(`Question: ${number} `);
   const userAnswer = readlineSync.question('Your answer: ');
-  let rightAnswer = 'no';
-  if (isNaturalNumber(number) === true) {
-    rightAnswer = 'yes';
-  }
-  if (userAnswer !== rightAnswer) {
-    console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${rightAnswer}.`);
-    console.log(`Let's try again, ${userName}!`);
-    return 'exit';
-  } else {
-    console.log('Correct!');
-  }
+  const rightAnswer = isNaturalNumber(number);
+  return [rightAnswer, userAnswer];
 };
 
 export default brainPrime;
