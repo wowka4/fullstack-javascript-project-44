@@ -8,5 +8,4 @@
 ```bash
  brain-games
 ```
-[![asciicast](https://asciinema.org/a/fBul2pj6akpw8Or8TqzxOrxmr.svg)](https://asciinema.org/a/fBul2pj6akpw8Or8TqzxOrxmr)
-
+<script async id="asciicast-fBul2pj6akpw8Or8TqzxOrxmr" src="https://asciinema.org/a/fBul2pj6akpw8Or8TqzxOrxmr.js"></script>
