@@ -1,6 +1,8 @@
 import readlineSync from 'readline-sync';
 import getRandomNumber from '../src/randomNumber.js';
 
+const rule = 'What is the result of the expression?';
+
 const getOperator = () => {
   const operators = ['+', '-', '*'];
   const number = getRandomNumber(0, 2);
@@ -27,4 +29,4 @@ const calc = () => {
   return [rightAnswer, Number(answer)];
 };
 
-export default calc;
+export { calc, rule };

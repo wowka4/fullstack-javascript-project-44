@@ -1,6 +1,8 @@
 import readlineSync from 'readline-sync';
 import getRandomNumber from '../src/randomNumber.js';
 
+const rule = 'Find the greatest common divisor of given numbers.';
+
 const findMinOperator = (num1, num2) => {
   if (num1 < num2) {
     return num1;
@@ -36,4 +38,4 @@ const brainGcd = () => {
   return [correctAnswer, Number(answer)];
 };
 
-export default brainGcd;
+export { brainGcd, rule };

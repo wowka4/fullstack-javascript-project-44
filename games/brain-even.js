@@ -1,6 +1,8 @@
 import readlineSync from 'readline-sync';
 import getRandomNumber from '../src/randomNumber.js';
 
+const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
+
 const isNumberEven = (num) => {
   if (num % 2 === 0) {
     return 'yes';
@@ -16,4 +18,4 @@ const brainEven = () => {
   return [result, userAnswer];
 };
 
-export default brainEven;
+export { brainEven, rule };

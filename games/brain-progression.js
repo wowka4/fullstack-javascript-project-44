@@ -1,6 +1,8 @@
 import readlineSync from 'readline-sync';
 import getRandomNumber from '../src/randomNumber.js';
 
+const rule = 'What number is missing in the progression?';
+
 const getProgression = () => {
   const lengthOfProgression = getRandomNumber(5, 15);
   const stepOfCount = getRandomNumber(1, 10);
@@ -23,4 +25,4 @@ const brainProgression = () => {
   return [rightAnswer, Number(userAnswer)];
 };
 
-export default brainProgression;
+export { brainProgression, rule };

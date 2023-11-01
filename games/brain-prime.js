@@ -1,6 +1,8 @@
 import readlineSync from 'readline-sync';
 import getRandomNumber from '../src/randomNumber.js';
 
+const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
 const isNaturalNumber = (num) => {
   let count = 0;
   for (let i = 2; i <= num / 2; i += 1) {
@@ -22,4 +24,4 @@ const brainPrime = () => {
   return [rightAnswer, userAnswer];
 };
 
-export default brainPrime;
+export { brainPrime, rule };
