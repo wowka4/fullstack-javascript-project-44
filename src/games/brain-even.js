@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import getRandomNumber from '../src/randomNumber.js';
+import getRandomNumber from '../randomNumber.js';
 
 const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
@@ -10,7 +10,7 @@ const isNumberEven = (num) => {
   return 'no';
 };
 
-const brainEven = () => {
+const generateRound = () => {
   const randomNumber = getRandomNumber(1, 1000);
   console.log(`Question: ${randomNumber}`);
   const userAnswer = readlineSync.question('Your answer: ');
@@ -18,4 +18,4 @@ const brainEven = () => {
   return [result, userAnswer];
 };
 
-export { brainEven, rule };
+export { rule, generateRound };

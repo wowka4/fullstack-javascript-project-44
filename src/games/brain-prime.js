@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import getRandomNumber from '../src/randomNumber.js';
+import getRandomNumber from '../randomNumber.js';
 
 const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -16,7 +16,7 @@ const isNaturalNumber = (num) => {
   return 'no';
 };
 
-const brainPrime = () => {
+const generateRound = () => {
   const number = getRandomNumber(1, 10);
   console.log(`Question: ${number} `);
   const userAnswer = readlineSync.question('Your answer: ');
@@ -24,4 +24,4 @@ const brainPrime = () => {
   return [rightAnswer, userAnswer];
 };
 
-export { brainPrime, rule };
+export { rule, generateRound };

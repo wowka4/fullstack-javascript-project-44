@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import getRandomNumber from '../src/randomNumber.js';
+import getRandomNumber from '../randomNumber.js';
 
 const rule = 'What number is missing in the progression?';
 
@@ -15,14 +15,14 @@ const getProgression = () => {
   return arrOfNums;
 };
 
-const brainProgression = () => {
+const generateRound = () => {
   const progression = getProgression();
   const lastIndex = progression.length - 1;
   const missNum = getRandomNumber(0, lastIndex);
   const rightAnswer = progression[missNum];
   progression[missNum] = '..';
-  const userAnswer = readlineSync.question(`Question: ${progression.join(' ')} `);
-  return [rightAnswer, Number(userAnswer)];
+  const userAnswer = Number(readlineSync.question(`Question: ${progression.join(' ')} `));
+  return [rightAnswer, userAnswer];
 };
 
-export { brainProgression, rule };
+export { rule, generateRound };
