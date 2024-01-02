@@ -20,7 +20,7 @@ const generateRound = () => {
   const missNum = getRandomNumber(0, lastIndex);
   const rightAnswer = String(progression[missNum]);
   progression[missNum] = '..';
-  const question = `Question: ${progression.join(' ')}`;
+  const question = `${progression.join(' ')}`;
   return [rightAnswer, question];
 };
 

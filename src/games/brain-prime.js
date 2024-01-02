@@ -16,7 +16,7 @@ const isNaturalNumber = (num) => {
 
 const generateRound = () => {
   const number = getRandomNumber(1, 50);
-  const question = `Question: ${number} `;
+  const question = `${number}`;
   const rightAnswer = isNaturalNumber(number);
   return [rightAnswer, question];
 };

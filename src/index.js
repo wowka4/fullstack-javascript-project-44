@@ -9,7 +9,7 @@ export default (rule, generateRound) => {
   console.log(rule);
   for (let i = 0; i < roundCount; i += 1) {
     const [rightAnswer, question] = generateRound();
-    console.log(question);
+    console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
     if (rightAnswer === answer) {
       console.log('Correct!');

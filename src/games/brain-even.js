@@ -7,7 +7,7 @@ const isEvenNumber = (num) => num % 2 === 0;
 
 const generateRound = () => {
   const randomNumber = getRandomNumber(1, 1000);
-  const question = `Question: ${randomNumber}`;
+  const question = `${randomNumber}`;
   const result = isEvenNumber(randomNumber) ? 'yes' : 'no';
   return [result, question];
 };

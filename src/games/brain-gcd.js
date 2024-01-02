@@ -25,7 +25,7 @@ const rightAnswer = (num1, num2) => {
 const generateRound = () => {
   const firstNumber = getRandomNumber(1, 100);
   const secondNumber = getRandomNumber(1, 100);
-  const question = `Question: ${firstNumber} ${secondNumber}`;
+  const question = `${firstNumber} ${secondNumber}`;
   const correctAnswer = String(rightAnswer(firstNumber, secondNumber));
   return [correctAnswer, question];
 };
