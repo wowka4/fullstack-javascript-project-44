@@ -8,11 +8,13 @@ export default (rule, generateRound) => {
   console.log(`Hello, ${userName}`);
   console.log(rule);
   for (let i = 0; i < roundCount; i += 1) {
-    const [question, answer] = generateRound();
-    if (question === answer) {
+    const [rightAnswer, question] = generateRound();
+    console.log(question);
+    const answer = readlineSync.question('Your answer: ');
+    if (rightAnswer === answer) {
       console.log('Correct!');
     } else {
-      console.log(`${answer} is wrong answer ;(. Correct answer was ${question}.`);
+      console.log(`${answer} is wrong answer ;(. Correct answer was ${rightAnswer}.`);
       console.log(`Let's try again, ${userName}!`);
       return;
     }

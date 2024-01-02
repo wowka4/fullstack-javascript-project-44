@@ -17,6 +17,7 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
+    "crc-32": "https://cdn.sheetjs.com/crc-32-latest/crc-32-latest.tgz",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {

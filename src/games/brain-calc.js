@@ -1,5 +1,5 @@
-import readlineSync from 'readline-sync';
 import getRandomNumber from '../randomNumber.js';
+import runEngine from '../index.js';
 
 const rule = 'What is the result of the expression?';
 
@@ -9,7 +9,7 @@ const getOperator = () => {
   return operators[randomIndex];
 };
 
-const calculation = (num1, num2, operator) => {
+const calculation = (num1, operator, num2) => {
   switch (operator) {
     case '+':
       return num1 + num2;
@@ -26,10 +26,9 @@ const generateRound = () => {
   const firstNum = getRandomNumber(1, 10);
   const secondNum = getRandomNumber(1, 10);
   const operator = getOperator();
-  console.log(`Question: ${firstNum} ${operator} ${secondNum}`);
-  const answer = Number(readlineSync.question('Your answer: '));
-  const rightAnswer = calculation(firstNum, secondNum, operator);
-  return [rightAnswer, answer];
+  const question = `${firstNum} ${operator} ${secondNum}`;
+  const rightAnswer = String(calculation(firstNum, operator, secondNum));
+  return [rightAnswer, question];
 };
 
-export { rule, generateRound };
+export default () => runEngine(rule, generateRound);

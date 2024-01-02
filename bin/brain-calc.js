@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import { rule, generateRound } from '../src/games/brain-calc.js';
-import runEngine from '../src/index.js';
+import runEngine from '../src/games/brain-calc.js';
 
-runEngine(rule, generateRound);
+runEngine();
