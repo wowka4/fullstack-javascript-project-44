@@ -8,16 +8,13 @@ const isNaturalNumber = (num) => {
   for (let i = 2; i <= Math.sqrt(num); i += 1) {
     if (num % i === 0) count += 1;
   }
-  if (count === 0) {
-    return 'yes';
-  }
-  return 'no';
+  return count === 0;
 };
 
 const generateRound = () => {
   const number = getRandomNumber(1, 50);
   const question = `${number}`;
-  const rightAnswer = isNaturalNumber(number);
+  const rightAnswer = isNaturalNumber(number) ? 'yes' : 'no';
   return [rightAnswer, question];
 };
 
